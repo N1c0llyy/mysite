@@ -1,0 +1,25 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h1>{{ post.titulo }}</h1>
+        <div class="post-meta">
+            {{ post.autor }} | {{ post.data_criacao|date:"M. d, Y, g:i a" }}
+        </div>
+        <hr>
+        <p>{{ post.conteudo }}</p>
+        <a href="/" class="btn btn-primary mt-3">← Voltar para o blog</a>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h2>About Us</h2>
+                <p>This awesome blog is made on the top of our Favourite full stack Framework 'Django', follow up the tutorial to learn how we made it..!</p>
+                <a href="#" class="read-more">Know more!</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
